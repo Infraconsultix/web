@@ -1,119 +1,499 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infraconsultix - Coming Soon</title>
-    
+    <title>Infraconsultix - Premier IT Solutions in Canada</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Infraconsultix is a leading Canadian IT consulting firm specializing in custom software development, cloud & DevOps, 24x7 operations, and cybersecurity.">
+    <meta name="keywords"
+        content="IT consulting Canada, Python development, AWS, Azure, GCP, DevOps, Cybersecurity, 24x7 IT support, Infraconsultix, Ajax, Ontario">
+    <meta name="author" content="Infraconsultix Inc.">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Infraconsultix - Premier IT Solutions in Canada">
+    <meta property="og:description"
+        content="Specializing in custom software development, cloud & DevOps, 24x7 operations, and cybersecurity.">
+    <meta property="og:image" content="logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Infraconsultix - Premier IT Solutions in Canada">
+    <meta property="twitter:description"
+        content="Specializing in custom software development, cloud & DevOps, 24x7 operations, and cybersecurity.">
+    <meta property="twitter:image" content="logo.png">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
+
+    <!-- Google Fonts: Poppins & Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 
+    <!-- Custom Styles -->
     <style>
-        /* Custom styles for the page */
         body {
-            font-family: 'Inter', sans-serif;
-            overflow: hidden; /* Prevents scrollbars on the full-screen layout */
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+            /* Lighter gray background */
         }
 
-        /* Animation for content fading in */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
         }
 
-        .fade-in {
-            animation: fadeIn 1s ease-out forwards;
+        .text-primary {
+            color: #1E2A38;
         }
 
-        /* Applying different delays for a staggered effect */
-        .fade-in-delay-1 { animation-delay: 0.2s; }
-        .fade-in-delay-2 { animation-delay: 0.4s; }
-        .fade-in-delay-3 { animation-delay: 0.6s; }
-        .fade-in-delay-4 { animation-delay: 0.8s; }
-        .fade-in-delay-5 { animation-delay: 1s; }
+        /* Navy Blue */
+        .text-secondary {
+            color: #007BFF;
+        }
+
+        /* Bright Blue */
+        .bg-primary {
+            background-color: #1E2A38;
+        }
+
+        .bg-secondary {
+            background-color: #007BFF;
+        }
+
+        .border-secondary {
+            border-color: #007BFF;
+        }
+
+        .hover\:bg-secondary-dark:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animation for elements fading in on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Service card hover effect */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            border-bottom-color: #007BFF;
+        }
+
+        .tech-logo {
+            transition: filter 0.3s ease;
+        }
+
+        .service-card:hover .tech-logo {
+            filter: grayscale(0);
+        }
     </style>
 </head>
-<body class="bg-slate-900">
 
-    <!-- Main container with background gradient and particle effect placeholder -->
-    <div id="main-container" class="relative h-screen w-screen flex items-center justify-center p-6 overflow-hidden">
-        
-        <!-- Background decorative shapes -->
-        <div class="absolute top-0 left-0 w-72 h-72 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-0 right-0 w-72 h-72 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse animation-delay-4000"></div>
+<body class="text-primary antialiased">
 
-        <!-- Content -->
-        <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
-            
-            <!-- Company Name / Logo -->
-            <h1 class="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500 fade-in">
-                Infraconsultix
-            </h1>
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-3">
+                <img src="logo.png" alt="Infraconsultix Logo" class="h-10 w-10">
+                <span class="text-2xl font-bold text-primary">Infra<span class="text-secondary">Consultix</span></span>
+            </a>
 
-            <!-- Tagline -->
-            <p class="mt-4 text-lg md:text-2xl text-slate-300 font-light fade-in fade-in-delay-1">
-                Engineering the Future of Infrastructure.
-            </p>
-
-            <!-- Main Message -->
-            <h2 class="mt-16 text-3xl md:text-5xl font-bold tracking-tight fade-in fade-in-delay-2">
-                Our new website is launching soon.
-            </h2>
-            <p class="mt-4 text-slate-400 max-w-xl mx-auto fade-in fade-in-delay-3">
-                We are working hard to bring you a seamless experience. Enter your email below to be the first to know when we go live.
-            </p>
-
-            <!-- Email Subscription Form -->
-            <form id="notify-form" class="mt-10 max-w-md mx-auto fade-in fade-in-delay-4">
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="email" id="email-input" required placeholder="Enter your email address" class="w-full px-5 py-4 text-base text-white bg-slate-800/60 border border-slate-700 rounded-lg focus:ring-4 focus:ring-cyan-500/50 focus:border-cyan-500 focus:outline-none transition duration-300 ease-in-out placeholder-slate-500">
-                    <button type="submit" class="w-full sm:w-auto flex-shrink-0 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-cyan-500/40 transition-all duration-300 ease-in-out transform hover:scale-105">
-                        Notify Me
-                    </button>
-                </div>
-                <p id="success-message" class="mt-4 text-green-400 hidden">Thank you! We'll be in touch soon.</p>
-            </form>
-
-            <!-- Social Media Links -->
-            <div class="mt-16 flex justify-center space-x-6 fade-in fade-in-delay-5">
-                <a href="#" class="text-slate-500 hover:text-white transition duration-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-                </a>
-                <a href="#" class="text-slate-500 hover:text-white transition duration-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
-                </a>
-                <a href="#" class="text-slate-500 hover:text-white transition duration-300">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.019c0 4.418 2.865 8.169 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.019C22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg>
-                </a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services"
+                    class="text-gray-600 hover:text-secondary font-semibold transition-colors">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-secondary font-semibold transition-colors">About Us</a>
+                <a href="#contact"
+                    class="text-gray-600 hover:text-secondary font-semibold transition-colors">Contact</a>
+                <a href="#contact"
+                    class="bg-secondary text-white px-5 py-2 rounded-full font-bold hover:bg-secondary-dark transition-all duration-300 transform hover:scale-105">Get
+                    a Free Consultation</a>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#services" class="block text-gray-600 hover:text-secondary font-semibold">Services</a>
+            <a href="#about" class="block text-gray-600 hover:text-secondary font-semibold">About Us</a>
+            <a href="#contact" class="block text-gray-600 hover:text-secondary font-semibold">Contact Us</a>
+            <a href="#contact"
+                class="block bg-secondary text-white text-center mt-2 px-5 py-2 rounded-full font-bold">Get a Free
+                Consultation</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="relative min-h-[90vh] flex items-center text-white">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop"
+                    alt="Abstract technology background representing cloud infrastructure"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-primary opacity-70"></div>
+            </div>
+            <div class="container relative z-10 mx-auto px-6 py-20 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight reveal">Empowering Innovation with <br
+                        class="hidden md:block" /> Cutting-Edge IT Solutions</h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto reveal"
+                    style="transition-delay: 200ms;">
+                    From ground-up project development to enterprise-grade cloud engineering and 24x7 operational
+                    support, InfraConsultix is your trusted Canadian IT partner.
+                </p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4 reveal" style="transition-delay: 400ms;">
+                    <a href="#contact"
+                        class="bg-secondary text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-secondary-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Get
+                        a Free Consultation</a>
+                    <a href="#services"
+                        class="bg-white text-secondary px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">Our
+                        Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Infraconsultix Section -->
+        <section class="py-20 bg-white mx-auto">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">Why InfraConsultix?</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Your dedicated partner for robust and scalable IT
+                        solutions, designed for the future.</p>
+                </div>
+                <div class="space-y-16">
+                    <!-- Feature 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center reveal">
+                        <img src="./whyus1.jpg" alt="A developer team collaborating on a software project"
+                            class="rounded-lg shadow-xl w-full h-auto object-cover">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">End-to-End Project Development</h3>
+                            <p class="mt-2 text-gray-600">We manage the entire project lifecycle, from initial concept
+                                and architecture to deployment and post-launch support, ensuring a seamless and
+                                successful delivery.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center reveal">
+                        <div class="md:order-last">
+                            <img src="./whyus2.jpg" alt="Abstract representation of multi-cloud platforms"
+                                class="rounded-lg shadow-xl w-full h-auto object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">Experts in AWS, Azure, and GCP</h3>
+                            <p class="mt-2 text-gray-600">Our certified engineers are proficient across all major cloud
+                                platforms, providing you with the best-fit solution for your infrastructure, whether
+                                public, private, or hybrid.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center reveal">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1974&auto=format&fit=crop"
+                            alt="A secure data center with server racks"
+                            class="rounded-lg shadow-xl w-full h-auto object-cover">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">Cybersecurity-Centric Approach</h3>
+                            <p class="mt-2 text-gray-600">Security isn't an afterthought; it's at the core of everything
+                                we build. We implement robust security measures to protect your assets and ensure
+                                compliance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-50 max-w-6xl mx-auto">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">Our Services</h2>
+                    <p class="text-gray-600 mt-2">Tailored solutions to meet your business needs.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full flex flex-col service-card reveal">
+                        <h3 class="text-2xl font-bold text-primary">Custom Software Development</h3>
+                        <p class="mt-4 text-gray-600 flex-grow">From architecture to deployment — we build modern,
+                            scalable software using Python and the latest full-stack technologies.</p>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center flex-wrap gap-4">
+                            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"
+                                class="h-7 w-7 tech-logo grayscale" title="Python">
+                            <img src="https://cdn.simpleicons.org/django/092E20" alt="Django"
+                                class="h-7 w-7 tech-logo grayscale" title="Django">
+                            <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI"
+                                class="h-7 w-7 tech-logo grayscale" title="FastAPI">
+                            <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js"
+                                class="h-7 w-7 tech-logo grayscale" title="Node.js">
+                            <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"
+                                class="h-7 w-7 tech-logo grayscale" title="React">
+                        </div>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full flex flex-col service-card reveal">
+                        <h3 class="text-2xl font-bold text-primary">Cloud & DevOps Engineering</h3>
+                        <p class="mt-4 text-gray-600 flex-grow">Maximize your cloud ROI with automated, secure, and
+                            scalable solutions across AWS, Azure, and GCP.</p>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center flex-wrap gap-4">
+                            <!-- <img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS" class="h-7 w-7 tech-logo grayscale" title="AWS">
+                            <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Azure" class="h-7 w-7 tech-logo grayscale" title="Azure"> -->
+                            <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="GCP"
+                                class="h-7 w-7 tech-logo grayscale" title="GCP">
+                            <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"
+                                class="h-7 w-7 tech-logo grayscale" title="Docker">
+                            <img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes"
+                                class="h-7 w-7 tech-logo grayscale" title="Kubernetes">
+                            <img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="Terraform"
+                                class="h-7 w-7 tech-logo grayscale" title="Terraform">
+                        </div>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full flex flex-col service-card reveal">
+                        <h3 class="text-2xl font-bold text-primary">24x7 IT Operations Support</h3>
+                        <p class="mt-4 text-gray-600 flex-grow">Your systems never sleep — and neither do we. We provide
+                            continuous monitoring, alerting, patching, and resolution.</p>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center flex-wrap gap-4">
+                            <img src="https://cdn.simpleicons.org/prometheus/E6522C" alt="Prometheus"
+                                class="h-7 w-7 tech-logo grayscale" title="Prometheus">
+                            <img src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana"
+                                class="h-7 w-7 tech-logo grayscale" title="Grafana">
+                            <img src="https://cdn.simpleicons.org/datadog/632CA6" alt="Datadog"
+                                class="h-7 w-7 tech-logo grayscale" title="Datadog">
+                            <img src="https://cdn.simpleicons.org/splunk/000000" alt="Splunk"
+                                class="h-7 w-7 tech-logo grayscale" title="Splunk">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-20 bg-white max-w-6xl mx-auto">
+            <div class="container mx-auto px-6 max-w-4xl text-center reveal">
+                <svg class="w-16 h-16 mx-auto text-gray-300" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                    <path
+                        d="M9.33 6.984h5.332l-2.668 8h-5.332l2.668-8zm10.668 0h5.332l-2.668 8h-5.332l2.668-8zM4 18.984c0 2.766 2.234 5 5 5h1v-6.668q0-2.031 0.734-3.484t2.109-2.328l0.547-0.344-2.668-8q-1.25 0-2.453 0.5t-1.922 1.328-1.328 1.922-0.5 2.453v4.586h-1.016q-2.75 0-4.969 2.219t-2.219 4.969v0zM14.668 18.984c0 2.766 2.234 5 5 5h1v-6.668q0-2.031 0.734-3.484t2.109-2.328l0.547-0.344-2.668-8q-1.25 0-2.453 0.5t-1.922 1.328-1.328 1.922-0.5 2.453v4.586h-1.016q-2.75 0-4.969 2.219t-2.219 4.969v0z" />
+                </svg>
+                <blockquote class="mt-4">
+                    <p class="text-2xl font-medium text-primary">“InfraConsultix helped us scale securely and
+                        efficiently in the cloud.”</p>
+                </blockquote>
+                <footer class="mt-4">
+                    <p class="font-semibold text-gray-600">CTO, SaaS Startup (Toronto)</p>
+                </footer>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-50 max-w-6xl mx-auto">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                            alt="Professional technology team collaborating in a modern Canadian office"
+                            class="rounded-xl shadow-2xl w-full h-auto object-cover">
+                    </div>
+                    <div class="reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold text-primary">Who We Are</h2>
+                        <p class="mt-4 text-gray-600">InfraConsultix is a Canadian IT consulting company based in Ajax,
+                            Ontario. Our mission is to empower startups, SMBs, and enterprises with robust digital
+                            solutions tailored to their needs. We specialize in custom development, cloud
+                            transformation, operations, and cybersecurity.</p>
+                        <h3 class="text-2xl font-bold text-primary mt-8">Our Vision</h3>
+                        <p class="mt-2 text-gray-600">To be a trusted partner for businesses worldwide, helping them
+                            innovate securely and scale confidently.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white mx-auto">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">Let’s Talk Tech!</h2>
+                    <p class="text-gray-600 mt-2">Whether you’re building from scratch or modernizing legacy systems,
+                        we’re here to help.</p>
+                </div>
+                <div
+                    class="bg-white rounded-xl shadow-2xl p-8 md:p-12 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-6 reveal">
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary">Contact Information</h3>
+                            <p class="mt-4 text-gray-600">42 Perfitt Crescent, Ajax, Ontario, Canada L1Z 1J3</p>
+                            <p class="mt-2 text-gray-600"><strong>Email:</strong> <a
+                                    href="mailto:info@infraconsultix.com"
+                                    class="hover:underline">info@infraconsultix.com</a></p>
+                            <p class="mt-2 text-gray-600"><strong>Phone:</strong> <a href="tel:+16479786429"
+                                    class="hover:underline">+1.647.978.6429</a></p>
+                        </div>
+                    </div>
+                    <!-- Contact Form -->
+                    <div class="reveal">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="relative"><input type="text" id="name" name="name" placeholder="Your Name"
+                                    required
+                                    class="w-full pl-4 pr-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg focus:outline-none focus:border-secondary transition-colors"><svg
+                                    class="w-5 h-5 absolute right-4 top-3.5 text-gray-400"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg></div>
+                            <div class="relative"><input type="email" id="email" name="email" placeholder="Your Email"
+                                    required
+                                    class="w-full pl-4 pr-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg focus:outline-none focus:border-secondary transition-colors"><svg
+                                    class="w-5 h-5 absolute right-4 top-3.5 text-gray-400"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg></div>
+                            <div><textarea id="message" name="message" rows="5" placeholder="Your Message" required
+                                    class="w-full px-4 py-3 bg-gray-100 border-2 border-transparent rounded-lg focus:outline-none focus:border-secondary transition-colors"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-secondary text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-secondary-dark transition-all duration-300 transform hover:scale-105 shadow-lg">Send
+                                Message</button>
+                            <p id="form-success" class="text-green-600 text-center mt-4 hidden">Thank you! Your message
+                                has been sent.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/16479786429?text=Hello%20Infraconsultix!%20I'm%20interested%20in%20your%20services."
+        target="_blank" rel="noopener noreferrer"
+        class="fixed size-16 bottom-6 right-6 bg-green-200 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform hover:scale-110 z-50">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>WhatsApp</title>
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+  <footer class="bg-primary text-white">
+    <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
+            
+            <div class="lg:col-span-1">
+                <div class="flex items-center justify-center md:justify-start mb-4">
+                    <img src="logo.png" alt="Infraconsultix Logo" class="h-12 w-12 mr-3">
+                    <p class="text-xl font-bold">Infra<span class="text-secondary">Consultix</span></p>
+                </div>
+                <p class="text-gray-400">Innovate. Integrate. Inspire.</p>
+            </div>
+
+            <div class="hidden lg:block"></div>
+
+            <div class="space-y-3 lg:text-right">
+                <h3 class="text-lg font-semibold text-white">Get in Touch</h3>
+                <p class="text-gray-400">42 Perfitt Crescent, Ajax, ON, Canada L1Z 1J3</p>
+                <p>
+                    <a href="mailto:info@infraconsultix.com" class="text-gray-400 hover:text-secondary hover:underline transition-colors">info@infraconsultix.com</a>
+                </p>
+                <p>
+                    <a href="tel:+16479786429" class="text-gray-400 hover:text-secondary hover:underline transition-colors">+1 (647) 978-6429</a>
+                </p>
+            </div>
+
         </div>
 
+        <div class="mt-10 pt-6 border-t border-gray-700 text-center text-gray-400">
+            <p>&copy; 2025 InfraConsultix Inc. All rights reserved.</p>
+            </div>
     </div>
+</footer>
 
     <script>
-        // Simple script to handle form submission and show a success message
-        const form = document.getElementById('notify-form');
-        const emailInput = document.getElementById('email-input');
-        const successMessage = document.getElementById('success-message');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            if (emailInput.value) {
-                // In a real application, you would send this email to your server
-                console.log('Email submitted:', emailInput.value);
-
-                // Hide the form and show the success message
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-            }
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        const formSuccessMessage = document.getElementById('form-success');
+        const phoneNumber = '16479786429'; // Your WhatsApp number
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Form submitted!');
+
+            // Get values from the form fields
+            // Make sure your form inputs have these IDs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create the message text
+            const text = `Hello Infraconsultix! I'm interested in your services.\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+            // Encode the text for the URL
+            const encodedText = encodeURIComponent(text);
+
+            // Create the WhatsApp URL
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+
+            // Reset the form and show a success message
+            contactForm.reset();
+            formSuccessMessage.classList.remove('hidden');
+            setTimeout(() => formSuccessMessage.classList.add('hidden'), 5000);
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => observer.observe(el));
     </script>
 
 </body>
+
 </html>
