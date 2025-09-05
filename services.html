@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Infraconsultix</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore our expert IT services: Custom Software Development with Python & React, Cloud & DevOps on AWS, Azure, GCP, and 24x7 IT Operations Support.">
+    <meta name="keywords"
+        content="IT services, custom software development, cloud engineering, DevOps, 24x7 support, Python development, AWS consulting, Azure solutions, GCP services, Infraconsultix">
+    <meta name="author" content="Infraconsultix Inc.">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Services - Infraconsultix">
+    <meta property="og:description"
+        content="Explore our expert IT services: Custom Software Development with Python & React, Cloud & DevOps on AWS, Azure, GCP, and 24x7 IT Operations Support.">
+    <meta property="og:image" content="og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Our Services - Infraconsultix">
+    <meta property="twitter:description"
+        content="Explore our expert IT services: Custom Software Development with Python & React, Cloud & DevOps on AWS, Azure, GCP, and 24x7 IT Operations Support.">
+    <meta property="twitter:image" content="og-image.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Poppins & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .text-primary {
+            color: #1E2A38;
+        }
+
+        .text-secondary {
+            color: #007BFF;
+        }
+
+        .bg-primary {
+            background-color: #1E2A38;
+        }
+
+        .bg-secondary {
+            background-color: #007BFF;
+        }
+
+        .border-secondary {
+            border-color: #007BFF;
+        }
+
+        .hover\:bg-secondary-dark:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animation for elements fading in on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="text-primary antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="logo.png" alt="Infraconsultix Logo" class="h-10 w-10 rounded-full">
+                <span class="text-2xl font-bold text-primary">Infra<span class="text-secondary">Consultix</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="services.html" class="text-secondary font-semibold transition-colors">Services</a>
+                <a href="index.html#about"
+                    class="text-gray-600 hover:text-secondary font-semibold transition-colors">About Us</a>
+                <a href="index.html#contact"
+                    class="text-gray-600 hover:text-secondary font-semibold transition-colors">Contact</a>
+                <a href="index.html#contact"
+                    class="bg-secondary text-white px-5 py-2 rounded-full font-bold hover:bg-secondary-dark transition-all duration-300 transform hover:scale-105">Get
+                    a Free Consultation</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="services.html" class="block text-secondary font-semibold">Services</a>
+            <a href="index.html#about" class="block text-gray-600 hover:text-secondary font-semibold">About Us</a>
+            <a href="index.html#contact" class="block text-gray-600 hover:text-secondary font-semibold">Contact Us</a>
+            <a href="index.html#contact"
+                class="block bg-secondary text-white text-center mt-2 px-5 py-2 rounded-full font-bold">Get a Free
+                Consultation</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Services Hero Section -->
+        <section class="bg-primary text-white py-24 relative">
+            <div class="absolute inset-0 z-0">
+                <img src="surface.jpg" alt="Abstract technology background representing cloud infrastructure"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-primary opacity-70"></div>
+            </div>
+            <div class="container mx-auto px-6 text-center relative">
+                <h1 class="text-4xl md:text-6xl font-bold reveal ">Our Core Services</h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto reveal"
+                    style="transition-delay: 200ms;">Driving your business forward with comprehensive, cutting-edge
+                    technology solutions.</p>
+            </div>
+        </section>
+
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="space-y-20">
+
+                    <!-- Service 1: Custom Software Development -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop"
+                            alt="A team planning a software project on a whiteboard"
+                            class="rounded-lg shadow-xl w-full h-full object-cover">
+                        <div class="flex flex-col justify-center">
+                            <h2 class="text-3xl font-bold text-primary">Custom Software Development</h2>
+                            <p class="mt-4 text-gray-600">We design and deliver modern, scalable applications tailored
+                                to your business needs. From backend APIs to front-end dashboards, we use proven
+                                frameworks and the latest full-stack technologies.</p>
+
+                            <h3 class="text-xl font-bold text-primary mt-6">What We Build:</h3>
+                            <ul class="mt-2 list-disc list-inside text-gray-600 space-y-1">
+                                <li>Web and mobile applications</li>
+                                <li>RESTful APIs and microservices</li>
+                                <li>Data-driven platforms (analytics dashboards, reporting tools)</li>
+                                <li>Enterprise system integrations</li>
+                            </ul>
+
+                            <h3 class="text-xl font-bold text-primary mt-6">Tech Stack Highlights:</h3>
+                            <div class="mt-4 flex items-center flex-wrap gap-x-6 gap-y-4">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" class="h-6 w-6"
+                                        title="Python">
+                                    <span class="text-gray-700 font-medium">Python</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" class="h-6 w-6"
+                                        title="Django">
+                                    <span class="text-gray-700 font-medium">Django</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" class="h-6 w-6"
+                                        title="FastAPI">
+                                    <span class="text-gray-700 font-medium">FastAPI</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js"
+                                        class="h-6 w-6" title="Node.js">
+                                    <span class="text-gray-700 font-medium">Node.js</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" class="h-6 w-6"
+                                        title="React">
+                                    <span class="text-gray-700 font-medium">React</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL"
+                                        class="h-6 w-6" title="PostgreSQL">
+                                    <span class="text-gray-700 font-medium">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Cloud & DevOps Engineering -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
+                        <div class="md:order-last h-full">
+                            <img src="cloud.jpeg" alt="Diagram showing a cloud infrastructure and DevOps pipeline"
+                                class="rounded-lg shadow-xl w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h2 class="text-3xl font-bold text-primary">Cloud & DevOps Engineering</h2>
+                            <p class="mt-4 text-gray-600">We help organizations maximize cloud ROI by automating
+                                infrastructure, improving deployment speed, and optimizing resources across AWS, Azure,
+                                and GCP.</p>
+
+                            <h3 class="text-xl font-bold text-primary mt-6">Key Services:</h3>
+                            <ul class="mt-2 list-disc list-inside text-gray-600 space-y-1">
+                                <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+                                <li>CI/CD pipeline implementation (GitHub Actions, Azure DevOps)</li>
+                                <li>Containerization & orchestration (Docker, Kubernetes)</li>
+                                <li>Cloud migration, cost optimization, and security</li>
+                            </ul>
+
+                            <h3 class="text-xl font-bold text-primary mt-6">Platforms & Tools:</h3>
+                            <div class="mt-4 flex items-center flex-wrap gap-x-6 gap-y-4">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                                        alt="AWS" class="h-6" title="AWS">
+                                    <span class="text-gray-700 font-medium">AWS</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="GCP" class="h-6 w-6"
+                                        title="GCP">
+                                    <span class="text-gray-700 font-medium">GCP</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="h-6 w-6"
+                                        title="Docker">
+                                    <span class="text-gray-700 font-medium">Docker</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes"
+                                        class="h-6 w-6" title="Kubernetes">
+                                    <span class="text-gray-700 font-medium">Kubernetes</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="Terraform"
+                                        class="h-6 w-6" title="Terraform">
+                                    <span class="text-gray-700 font-medium">Terraform</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: 24x7 IT Operations Support -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1974&auto=format&fit=crop"
+                            alt="A network operations center with multiple monitoring dashboards"
+                            class="rounded-lg shadow-xl w-full h-full object-cover">
+                        <div class="flex flex-col justify-center">
+                            <h2 class="text-3xl font-bold text-primary">24x7 IT Operations Support</h2>
+                            <p class="mt-4 text-gray-600">Your systems never sleep — and neither do we. Our IT
+                                operations team provides round-the-clock support so your business stays online without
+                                disruptions.</p>
+
+                            <h3 class="text-xl font-bold text-primary mt-6">What’s Included:</h3>
+                            <ul class="mt-2 list-disc list-inside text-gray-600 space-y-1">
+                                <li>24x7 proactive monitoring and alerting</li>
+                                <li>Rapid incident response and root cause analysis</li>
+                                <li>Automated patching and security updates</li>
+                                <li>Log management and performance optimization</li>
+                            </ul>
+
+                            <h3 class="text-xl font-bold text-primary mt-6">Tools We Master:</h3>
+                            <div class="mt-4 flex items-center flex-wrap gap-x-6 gap-y-4">
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/prometheus/E6522C" alt="Prometheus"
+                                        class="h-6 w-6" title="Prometheus">
+                                    <span class="text-gray-700 font-medium">Prometheus</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana" class="h-6 w-6"
+                                        title="Grafana">
+                                    <span class="text-gray-700 font-medium">Grafana</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/datadog/632CA6" alt="Datadog" class="h-6 w-6"
+                                        title="Datadog">
+                                    <span class="text-gray-700 font-medium">Datadog</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/splunk/000000" alt="Splunk" class="h-6 w-6"
+                                        title="Splunk">
+                                    <span class="text-gray-700 font-medium">Splunk</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="https://cdn.simpleicons.org/pagerduty/06AC38" alt="PagerDuty"
+                                        class="h-6 w-6" title="PagerDuty">
+                                    <span class="text-gray-700 font-medium">PagerDuty</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary">Ready to Build Your Future?</h2>
+                <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Let's discuss how our IT expertise can help you achieve
+                    your business goals.</p>
+                <div class="mt-8">
+                    <a href="index.html#contact"
+                        class="bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-secondary-dark transition-all duration-300 transform hover:scale-105 shadow-lg">Get
+                        a Free Consultation</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/16479786429?text=Hello%20Infraconsultix!%20I'm%20interested%20in%20your%20services."
+        target="_blank" rel="noopener noreferrer"
+        class="fixed w-14 h-14 bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-transform hover:scale-110 z-50 flex items-center justify-center">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="currentColor">
+            <title>WhatsApp</title>
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <img src="logo.png" alt="Infraconsultix Logo" class="h-12 w-12 mr-3 rounded-full">
+                        <p class="text-xl font-bold">Infra<span class="text-secondary">Consultix</span></p>
+                    </div>
+                    <p class="text-gray-400">Innovate. Integrate. Inspire.</p>
+                </div>
+
+                <div class="hidden lg:block"></div>
+
+                <div class="space-y-3 lg:text-right">
+                    <h3 class="text-lg font-semibold text-white">Get in Touch</h3>
+                    <p>
+                        <a href="mailto:info@infraconsultix.com"
+                            class="text-gray-400 hover:text-secondary hover:underline transition-colors">info@infraconsultix.com</a>
+                    </p>
+                    <p>
+                        <a href="tel:+16479786429"
+                            class="text-gray-400 hover:text-secondary hover:underline transition-colors">+1 (647)
+                            978-6429</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 InfraConsultix Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
